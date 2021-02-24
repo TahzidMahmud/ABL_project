@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 void main() {
   runApp(MaterialApp(
@@ -24,7 +25,7 @@ class MainApp extends StatelessWidget {
 
             children: [
               Padding(
-                padding: const EdgeInsets.fromLTRB(0, 0, 180, 40),
+                padding: const EdgeInsets.fromLTRB(0, 0, 180, 30),
                 child: Text("ABL Privilege",
                   textAlign: TextAlign.left,
                 style: TextStyle(fontWeight: FontWeight.bold,fontSize: 25,),),
@@ -241,7 +242,7 @@ class MainApp extends StatelessWidget {
               Row(
                   children: [
                     Container(
-                      height: 80,
+                      height: 85,
                       width: 352,
                       decoration: BoxDecoration(
                           color: Colors.grey[300],
@@ -290,35 +291,45 @@ class MainApp extends StatelessWidget {
 
                             ],
                           ),
-                          Container(
-                            height: 48,
-                            width: 48,
-                            decoration: BoxDecoration(
-                                color: Colors.grey[300],
-                                borderRadius: BorderRadius.circular(50.0),
+                          GestureDetector(
+                            onTap: () async {
+                                    const url = 'https://www.amarbazarltd.com/';
+                                    if (await canLaunch(url)) {
+                                      print("url loaded");
+                                  await launch(url);
+                                  } else {
+                                  throw 'Could not launch $url';
+                                  }},
+                            child: Container(
+                              height: 48,
+                              width: 48,
+                              decoration: BoxDecoration(
+                                  color: Colors.grey[300],
+                                  borderRadius: BorderRadius.circular(50.0),
 
-                                boxShadow: [
-                                  BoxShadow(
-                                    color: Colors.white,
-                                    offset: Offset(-5.0,-5.0),
-                                    blurRadius: 15.0,
-                                    spreadRadius: 1.0,
-                                  ),
+                                  boxShadow: [
+                                    BoxShadow(
+                                      color: Colors.white,
+                                      offset: Offset(-5.0,-5.0),
+                                      blurRadius: 15.0,
+                                      spreadRadius: 1.0,
+                                    ),
 
-                                  BoxShadow(
-                                    color: Colors.grey[500],
-                                    offset: Offset(5.0,5.0),
-                                    blurRadius: 15.0,
-                                    spreadRadius: 1.0,
-                                  ),
+                                    BoxShadow(
+                                      color: Colors.grey[500],
+                                      offset: Offset(5.0,5.0),
+                                      blurRadius: 15.0,
+                                      spreadRadius: 1.0,
+                                    ),
 
-                                ]
+                                  ]
+                              ),
+                              child:
+
+                              Icon(Icons.arrow_forward_ios_outlined,size: 27,color: Colors.blueAccent,),
+
+
                             ),
-                            child:
-
-                            Icon(Icons.arrow_forward_ios_outlined,size: 27,color: Colors.blueAccent,),
-
-
                           ),
                         ],
 
@@ -333,6 +344,8 @@ class MainApp extends StatelessWidget {
 
     );
   }
+
+  // launch(String url, {bool forceSafariVC}) {}
 }
 
 
