@@ -15,122 +15,318 @@ class MainApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.grey[200],
-      body: SafeArea(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: [
-                Container(
+      backgroundColor: Colors.grey[300],
+      body:
+        Padding(
+          padding: const EdgeInsets.fromLTRB(0, 35, 0, 0),
+          child: Column(
+             // mainAxisAlignment: MainAxisAlignment.center,
+
+            children: [
+              Padding(
+                padding: const EdgeInsets.fromLTRB(0, 0, 180, 40),
+                child: Text("ABL Privilege",
+                  textAlign: TextAlign.left,
+                style: TextStyle(fontWeight: FontWeight.bold,fontSize: 25,),),
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  Container(
                     height: 200,
                     width: 150,
                     decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(15.0),
-                      color: Colors.grey[200],
-                        gradient: LinearGradient(
-                          stops: [0, 1],
-                          begin: Alignment.topLeft,
-                          end: Alignment.bottomRight,
-                          colors:
-                          [Color(0xffffffff), Color(0xffe6e6e6)],
-                        ),
-                      boxShadow: [
+                        color: Colors.grey[300],
+                        borderRadius: BorderRadius.circular(10.0),
 
-                        BoxShadow(
-                          color: Colors.grey[600],
-                          offset: Offset(4.0,4.0),
-                          blurRadius: 15.0,
-                          spreadRadius: 1.0,
-                        ),
-                        BoxShadow(
-                          color: Colors.white,
-                          offset: Offset(-4.0,-4.0),
-                          blurRadius: 15.0,
-                          spreadRadius: 1.0,
-                        ),
+                        boxShadow: [
+                          BoxShadow(
+                            color: Colors.white,
+                            offset: Offset(-5.0,-5.0),
+                            blurRadius: 15.0,
+                            spreadRadius: 1.0,
+                          ),
 
+                          BoxShadow(
+                            color: Colors.grey[500],
+                            offset: Offset(5.0,5.0),
+                            blurRadius: 15.0,
+                            spreadRadius: 1.0,
+                          ),
 
-                      ]
+                        ]
                     ),
                     child:
-                      // elevation: 4,
-                     Icon(Icons.android_outlined,size: 60,color: Colors.cyan[300],),
-                    // shape: RoundedRectangleBorder(
-                    //   borderRadius: BorderRadius.circular(10.0),
-                    // ),
+                    Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Column(
+                        children: [
+                          Padding(
+                            padding: const EdgeInsets.fromLTRB(0, 10, 0, 0),
+                            child: Icon(Icons.account_balance_outlined,size: 50,color: Colors.blueAccent,),
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.fromLTRB(0, 10, 0, 10),
+                            child: Text("Nearest Express Shop",
+                              textAlign: TextAlign.left,
+                              style: TextStyle(fontWeight: FontWeight.bold,fontSize: 20,),),
+                          ),
+                          Text("Search Your Desired Shop Here",
+                            textAlign: TextAlign.left,
+                            style: TextStyle(color:Colors.black54,fontSize: 15,),),
 
-                ),
-                Container(
+                        ],
+                      ),
+                    ),
+                  ),
+                  Container(
                     height: 200,
                     width: 150,
-                    // decoration: BoxDecoration(
-                    //     color: Colors.grey[200],
-                    //     boxShadow: [
-                    //       BoxShadow(
-                    //         color: Colors.grey[600],
-                    //         offset: Offset(4.0,4.0),
-                    //         blurRadius: 15.0,
-                    //         spreadRadius: 1.0,
-                    //       ),
-                    //       BoxShadow(
-                    //         color: Colors.white,
-                    //         offset: Offset(-4.0,-4.0),
-                    //         blurRadius: 15.0,
-                    //         spreadRadius: 1.0,
-                    //       ),
-                    //
-                    //     ]
-                    // ),
-                    child: Card(
-                      elevation: 4,
-
-                      child: Icon(Icons.android_outlined,size: 60,color: Colors.cyan[300],),
-                      shape: RoundedRectangleBorder(
+                    decoration: BoxDecoration(
+                        color: Colors.grey[300],
                         borderRadius: BorderRadius.circular(10.0),
-                      ),
 
-                    )),
-              ],
+                        boxShadow: [
+                          BoxShadow(
+                            color: Colors.white,
+                            offset: Offset(-5.0,-5.0),
+                            blurRadius: 15.0,
+                            spreadRadius: 1.0,
+                          ),
+
+                          BoxShadow(
+                            color: Colors.grey[500],
+                            offset: Offset(5.0,5.0),
+                            blurRadius: 15.0,
+                            spreadRadius: 1.0,
+                          ),
+
+                        ]
+                    ),
+                    child:
+                    Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Column(
+                        children: [
+                          Padding(
+                            padding: const EdgeInsets.fromLTRB(0, 10, 0, 0),
+                            child: Icon(Icons.bar_chart,size: 50,color: Colors.blueAccent,),
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.fromLTRB(0, 10, 0, 10),
+                            child: Text("My Cashback",
+                              textAlign: TextAlign.left,
+                              style: TextStyle(fontWeight: FontWeight.bold,fontSize: 20,),),
+                          ),
+                          Text("Track Your Cashback Reports",
+                            textAlign: TextAlign.left,
+                            style: TextStyle(color:Colors.black54,fontSize: 15,),),
+
+                        ],
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+              SizedBox(
+                height: 20,
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  Container(
+                    height: 200,
+                    width: 150,
+                    decoration: BoxDecoration(
+                        color: Colors.grey[300],
+                        borderRadius: BorderRadius.circular(10.0),
+
+                        boxShadow: [
+                          BoxShadow(
+                            color: Colors.white,
+                            offset: Offset(-5.0,-5.0),
+                            blurRadius: 15.0,
+                            spreadRadius: 1.0,
+                          ),
+
+                          BoxShadow(
+                            color: Colors.grey[500],
+                            offset: Offset(5.0,5.0),
+                            blurRadius: 15.0,
+                            spreadRadius: 1.0,
+                          ),
+
+                        ]
+                    ),
+                    child:
+                    Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Column(
+                        children: [
+                          Padding(
+                            padding: const EdgeInsets.fromLTRB(0, 10, 0, 0),
+                            child: Icon(Icons.assignment_ind_outlined,size: 50,color: Colors.blueAccent,),
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.fromLTRB(0, 10, 0, 10),
+                            child: Text("Contact US",
+                              textAlign: TextAlign.left,
+                              style: TextStyle(fontWeight: FontWeight.bold,fontSize: 20,),),
+                          ),
+                          Text("You Can Contact UsFrom Here",
+                            textAlign: TextAlign.left,
+                            style: TextStyle(color:Colors.black54,fontSize: 15,),),
+
+                        ],
+                      ),
+                    ),
+                  ),
+                  Container(
+                    height: 200,
+                    width: 150,
+                    decoration: BoxDecoration(
+                        color: Colors.grey[300],
+                        borderRadius: BorderRadius.circular(10.0),
+
+                        boxShadow: [
+                          BoxShadow(
+                            color: Colors.white,
+                            offset: Offset(-5.0,-5.0),
+                            blurRadius: 15.0,
+                            spreadRadius: 1.0,
+                          ),
+
+                          BoxShadow(
+                            color: Colors.grey[500],
+                            offset: Offset(5.0,5.0),
+                            blurRadius: 15.0,
+                            spreadRadius: 1.0,
+                          ),
+
+                        ]
+                    ),
+                    child:
+                    Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Column(
+                        children: [
+                          Padding(
+                            padding: const EdgeInsets.fromLTRB(0, 10, 0, 0),
+                            child: Icon(Icons.announcement_outlined,size: 50,color: Colors.blueAccent,),
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.fromLTRB(0, 10, 0, 10),
+                            child: Text("About Us",
+                              textAlign: TextAlign.left,
+                              style: TextStyle(fontWeight: FontWeight.bold,fontSize: 20,),),
+                          ),
+                          Text("Information About This Application",
+                            textAlign: TextAlign.left,
+                            style: TextStyle(color:Colors.black54,fontSize: 15,),),
+
+                        ],
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            Padding(
+              padding: const EdgeInsets.fromLTRB(0, 20, 150, 20),
+              child: Text("ABL Information",
+              textAlign: TextAlign.left,
+              style: TextStyle(fontWeight: FontWeight.bold,fontSize: 20,),
+              ),
             ),
-            SizedBox(
-              height: 20,
-            ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
 
-              children: [
-                Container(
-                    height: 200,
-                    width: 150,
-                    child: Card(
-                      elevation: 4,
+              Row(
+                  children: [
+                    Container(
+                      height: 80,
+                      width: 350,
+                      decoration: BoxDecoration(
+                          color: Colors.grey[300],
+                          borderRadius: BorderRadius.circular(10.0),
 
-                      child: Icon(Icons.android_outlined,size: 60,color: Colors.cyan[300],),
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(10.0),
+                          boxShadow: [
+                            BoxShadow(
+                              color: Colors.white,
+                              offset: Offset(-5.0,-5.0),
+                              blurRadius: 15.0,
+                              spreadRadius: 1.0,
+                            ),
+
+                            BoxShadow(
+                              color: Colors.grey[500],
+                              offset: Offset(5.0,5.0),
+                              blurRadius: 15.0,
+                              spreadRadius: 1.0,
+                            ),
+
+                          ]
                       ),
+                      child:
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                        children: [
+                          Padding(
+                            padding: const EdgeInsets.all(8.0),
+                          ),
+                          Icon(Icons.assignment_ind_outlined,size: 50,color: Colors.blueAccent,),
+                          Column(
+                            children: [
+                              Padding(
+                                padding: const EdgeInsets.fromLTRB(10, 10, 0, 10),
+                                child: Text("Amar Bazar Limited",
+                                  textAlign: TextAlign.left,
+                                  style: TextStyle(fontWeight: FontWeight.bold,fontSize: 20,),),
+                              ),
+                              Text("Everything Online",
+                                textAlign: TextAlign.left,
+                                style: TextStyle(color:Colors.black54,fontSize: 17,),
+                              ),
 
-                    )),
-                Container(
-                    height: 200,
-                    width: 150,
+                            ],
+                          ),
+                          Container(
+                            height: 50,
+                            width: 50,
+                            decoration: BoxDecoration(
+                                color: Colors.grey[300],
+                                borderRadius: BorderRadius.circular(50.0),
 
-                    child: Card(
-                      elevation: 4,
+                                boxShadow: [
+                                  BoxShadow(
+                                    color: Colors.white,
+                                    offset: Offset(-5.0,-5.0),
+                                    blurRadius: 15.0,
+                                    spreadRadius: 1.0,
+                                  ),
 
-                      child: Icon(Icons.android_outlined,size: 60,color: Colors.cyan[300],),
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(10.0),
+                                  BoxShadow(
+                                    color: Colors.grey[500],
+                                    offset: Offset(5.0,5.0),
+                                    blurRadius: 15.0,
+                                    spreadRadius: 1.0,
+                                  ),
+
+                                ]
+                            ),
+                            child:
+
+                            Icon(Icons.arrow_forward_ios_outlined,size: 27,color: Colors.blueAccent,),
+
+
+                          ),
+                        ],
+
                       ),
-
-                    )),
-              ],
-            )
-          ],
+                    ),
+                  ],
+              )
+            ],
+          ),
         ),
-      ),
+
 
     );
   }
