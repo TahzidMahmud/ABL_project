@@ -242,7 +242,7 @@ class MainApp extends StatelessWidget {
                   children: [
                     Container(
                       height: 80,
-                      width: 350,
+                      width: 352,
                       decoration: BoxDecoration(
                           color: Colors.grey[300],
                           borderRadius: BorderRadius.circular(10.0),
@@ -271,7 +271,10 @@ class MainApp extends StatelessWidget {
                           Padding(
                             padding: const EdgeInsets.all(8.0),
                           ),
-                          Icon(Icons.assignment_ind_outlined,size: 50,color: Colors.blueAccent,),
+                          Padding(
+                            padding: const EdgeInsets.fromLTRB(0, 5, 5, 5),
+                            child: Image(image: AssetImage('assets/abl_logo.png')),
+                          ),
                           Column(
                             children: [
                               Padding(
@@ -288,8 +291,8 @@ class MainApp extends StatelessWidget {
                             ],
                           ),
                           Container(
-                            height: 50,
-                            width: 50,
+                            height: 48,
+                            width: 48,
                             decoration: BoxDecoration(
                                 color: Colors.grey[300],
                                 borderRadius: BorderRadius.circular(50.0),
