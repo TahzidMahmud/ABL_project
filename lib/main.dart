@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:abl/static_pages/about_us.dart';
 import 'package:abl/static_pages/contact_us.dart';
+import 'package:abl/static_pages/log_in.dart';
 import 'package:http/http.dart';
 
 void main() {
@@ -12,8 +13,9 @@ void main() {
       '/':(context)=>MainApp(),
       '/about_us':(context)=>AboutUs(),
       '/contact_us':(context)=>ContactUs(),
+      '/log_in':(context)=>Login(),
     },
-    initialRoute: '/',
+    initialRoute: '/log_in',
   ));
 }
 

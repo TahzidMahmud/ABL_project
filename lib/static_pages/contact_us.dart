@@ -73,7 +73,7 @@ class _ContactUsState extends State<ContactUs> {
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: [
                   Padding(
-                    padding: const EdgeInsets.fromLTRB(10, 30, 0, 50),
+                    padding: const EdgeInsets.fromLTRB(10, 0, 0, 40),
                     child: Text("CONTACT US",
                       textAlign: TextAlign.left,
                       style: TextStyle(fontWeight: FontWeight.bold,fontSize: 35,),),
@@ -162,7 +162,7 @@ class _ContactUsState extends State<ContactUs> {
                               Padding(
                                 padding: const EdgeInsets.fromLTRB(8, 15, 8, 15),
                                 child: TextFormField(
-                                  maxLines: 5,
+                                  maxLines: 4,
                                   controller: feedbackController,
                                   decoration: InputDecoration(
                                     alignLabelWithHint: true,
@@ -202,7 +202,6 @@ class _ContactUsState extends State<ContactUs> {
                                       postForm();
                                     }
                                   },
-                                  icon: Icon(Icons.attach_file_outlined),
                                   label: Text('SUBMIT'),
                                 ),
                               )
