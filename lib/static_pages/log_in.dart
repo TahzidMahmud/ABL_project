@@ -9,7 +9,7 @@ class Login extends StatefulWidget {
 }
 
 class _LoginState extends State<Login> {
-  final _formKey = GlobalKey<FormState>();
+  final _fKey = GlobalKey<FormState>();
   final emailController=TextEditingController();
   final passwordController=TextEditingController();
 
@@ -27,7 +27,7 @@ class _LoginState extends State<Login> {
       context: context,
       type: AlertType.error,
       title: "Serveice Not Implemented Yet..!!",
-      // desc: "title:${data['title']}",
+       // desc: "email:${data['email']} pass:${data['password']}",
       buttons: [
         DialogButton(
           child: Text(
@@ -71,7 +71,10 @@ class _LoginState extends State<Login> {
                   textAlign: TextAlign.left,
                   style: TextStyle(fontWeight: FontWeight.bold,fontSize: 40,),),
               ),
-              Form(child: Column(
+              Form(
+                  key: _fKey,
+                  child: Column(
+
                 children: [
                   Padding(
                     padding: const EdgeInsets.fromLTRB(15, 15, 15, 10),
@@ -174,10 +177,10 @@ class _LoginState extends State<Login> {
                       // backgroundColor: const Color(0xff03dac6),
                       foregroundColor: Colors.white,
                       onPressed: () {
-
-                        if(_formKey.currentState.validate()){
+                        print("statel**************");
+                        if(_fKey.currentState.validate()){
                           setState(() {
-                            print("state set");
+                            // print("${_fKey.currentContext}");
 
                             data={
 
