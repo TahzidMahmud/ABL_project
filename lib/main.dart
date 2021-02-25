@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:abl/static_pages/about_us.dart';
+import 'package:abl/static_pages/contact_us.dart';
 import 'package:http/http.dart';
 
 void main() {
@@ -10,6 +11,7 @@ void main() {
     routes:{
       '/':(context)=>MainApp(),
       '/about_us':(context)=>AboutUs(),
+      '/contact_us':(context)=>ContactUs(),
     },
     initialRoute: '/',
   ));
@@ -138,50 +140,55 @@ class MainApp extends StatelessWidget {
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
-                  Container(
-                    height: 200,
-                    width: 150,
-                    decoration: BoxDecoration(
-                        color: Colors.grey[300],
-                        borderRadius: BorderRadius.circular(10.0),
+                  GestureDetector(
+                    onTap: (){
+                      Navigator.pushNamed(context, '/contact_us');
+                    },
+                    child: Container(
+                      height: 200,
+                      width: 150,
+                      decoration: BoxDecoration(
+                          color: Colors.grey[300],
+                          borderRadius: BorderRadius.circular(10.0),
 
-                        boxShadow: [
-                          BoxShadow(
-                            color: Colors.white,
-                            offset: Offset(-5.0,-5.0),
-                            blurRadius: 15.0,
-                            spreadRadius: 1.0,
-                          ),
+                          boxShadow: [
+                            BoxShadow(
+                              color: Colors.white,
+                              offset: Offset(-5.0,-5.0),
+                              blurRadius: 15.0,
+                              spreadRadius: 1.0,
+                            ),
 
-                          BoxShadow(
-                            color: Colors.grey[500],
-                            offset: Offset(5.0,5.0),
-                            blurRadius: 15.0,
-                            spreadRadius: 1.0,
-                          ),
+                            BoxShadow(
+                              color: Colors.grey[500],
+                              offset: Offset(5.0,5.0),
+                              blurRadius: 15.0,
+                              spreadRadius: 1.0,
+                            ),
 
-                        ]
-                    ),
-                    child:
-                    Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: Column(
-                        children: [
-                          Padding(
-                            padding: const EdgeInsets.fromLTRB(0, 10, 0, 0),
-                            child: Icon(Icons.assignment_ind_outlined,size: 50,color: Colors.blueAccent,),
-                          ),
-                          Padding(
-                            padding: const EdgeInsets.fromLTRB(0, 10, 0, 10),
-                            child: Text("Contact US",
+                          ]
+                      ),
+                      child:
+                      Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Column(
+                          children: [
+                            Padding(
+                              padding: const EdgeInsets.fromLTRB(0, 10, 0, 0),
+                              child: Icon(Icons.assignment_ind_outlined,size: 50,color: Colors.blueAccent,),
+                            ),
+                            Padding(
+                              padding: const EdgeInsets.fromLTRB(0, 10, 0, 10),
+                              child: Text("Contact US",
+                                textAlign: TextAlign.left,
+                                style: TextStyle(fontWeight: FontWeight.bold,fontSize: 20,),),
+                            ),
+                            Text("You Can Contact UsFrom Here",
                               textAlign: TextAlign.left,
-                              style: TextStyle(fontWeight: FontWeight.bold,fontSize: 20,),),
-                          ),
-                          Text("You Can Contact UsFrom Here",
-                            textAlign: TextAlign.left,
-                            style: TextStyle(color:Colors.black54,fontSize: 15,),),
+                              style: TextStyle(color:Colors.black54,fontSize: 15,),),
 
-                        ],
+                          ],
+                        ),
                       ),
                     ),
                   ),
