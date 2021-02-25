@@ -12,6 +12,9 @@ class _LoginState extends State<Login> {
   final _fKey = GlobalKey<FormState>();
   final emailController=TextEditingController();
   final passwordController=TextEditingController();
+  next(){
+    Navigator.pushNamed(context, '/');
+  }
 
 
   final url ='https://jsonplaceholder.typicode.com/posts';
@@ -34,12 +37,17 @@ class _LoginState extends State<Login> {
             "Ok",
             style: TextStyle(color: Colors.white, fontSize: 20),
           ),
-          onPressed: () => Navigator.pop(context),
+          onPressed: ()  {
+            Navigator.pop(context);
+          next();
+          },
           width: 120,
         )
       ],
     ).show();
-    print("called");}
+    print("called");
+
+  }
   @override
   void dispose() {
     // Clean up the controller when the widget is removed from the
